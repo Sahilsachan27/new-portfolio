@@ -247,7 +247,7 @@ export default function Home() {
       image: '/workwayfinder.png', // <-- change to your actual screenshot file
       tech: ['React.js', 'Node.js', 'MySQL', 'Leaflet', 'Express'],
       github: 'https://github.com/Sahilsachan27', // <-- add correct repo link
-      live: 'http://localhost:3000', // <-- replace with your deployed link if any
+      live: 'http://workwayfinder.tech', // <-- replace with your deployed link if any
     },
 
     {
@@ -273,7 +273,7 @@ export default function Home() {
       image: '/portfolio.png',
       tech: ['HTML', 'CSS', 'JavaScript', 'Netlify'],
       github: 'https://github.com/Sahilsachan27',
-      live: 'https://sahilsachanportfolio.netlify.app/',
+      live: 'https://sahilsachansportfolio.netlify.app/',
     },
 
     {
