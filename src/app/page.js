@@ -244,7 +244,7 @@ export default function Home() {
       title: 'WorkWayFinder – Real-Time Employee Location Tracking System',
       description:
         '• Developed a web-based system to monitor employee movement across campus in real time. • Built using React.js, Node.js, and MySQL with secure role-based authentication for Admins and Employees. • Enhanced operational visibility and workforce efficiency through an interactive Leaflet/OSM-based live location dashboard.',
-      image: '/WorkWayFinder.png', // <-- change to your actual screenshot file
+      image: '/workwayfinder.png', // <-- change to your actual screenshot file
       tech: ['React.js', 'Node.js', 'MySQL', 'Leaflet', 'Express'],
       github: 'https://github.com/Sahilsachan27', // <-- add correct repo link
       live: 'http://localhost:3000', // <-- replace with your deployed link if any
