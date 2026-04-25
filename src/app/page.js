@@ -244,7 +244,7 @@ export default function Home() {
       title: 'Attendify – AI-Powered Smart Attendance System',
       description:
         '• Engineered a facial recognition-based attendance system using Python, OpenCV, and DeepFace, achieving ~95% accuracy. • Built a full-stack solution with React, Flask, and MongoDB Atlas with JWT authentication and Cloudinary storage. • Deployed as an Android APK via Capacitor with camera access and GPS geo-fencing.',
-      image: '/attendify.png',
+      image: '/attendifyy.png',
       tech: ['React', 'Flask', 'Python', 'OpenCV', 'MongoDB', 'Capacitor'],
       github: 'https://github.com/Sahilsachan27',
       live: 'https://attendifyy.in/',
