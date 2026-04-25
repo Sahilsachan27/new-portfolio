@@ -82,7 +82,7 @@ export const FollowPointer = ({ x, y, title }) => {
         fill="currentColor"
         strokeWidth="1"
         viewBox="0 0 16 16"
-        className="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-orange-500 text-orange-400 drop-shadow-lg"
+        className="h-6 w-6 -translate-x-[12px] -translate-y-[10px] -rotate-[70deg] transform stroke-green-500 text-green-400 drop-shadow-lg"
         height="1em"
         width="1em"
         xmlns="http://www.w3.org/2000/svg"
@@ -110,14 +110,14 @@ export const FollowPointer = ({ x, y, title }) => {
           damping: 30,
           delay: 0.1,
         }}
-        className="absolute -top-8 left-4 min-w-max rounded-full bg-gradient-to-r from-orange-500 to-red-600 px-3 py-1.5 text-xs font-medium text-white shadow-lg shadow-orange-500/25 border border-orange-400/30"
+        className="absolute -top-8 left-4 min-w-max rounded-full bg-gradient-to-r from-green-500 to-red-600 px-3 py-1.5 text-xs font-medium text-white shadow-lg shadow-green-500/25 border border-green-400/30"
       >
         {title || `Explore Project`}
       </motion.div>
 
       {/* Glow Effect */}
       <motion.div
-        className="absolute -inset-2 rounded-full bg-orange-400/20 blur-sm"
+        className="absolute -inset-2 rounded-full bg-green-400/20 blur-sm"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         exit={{ scale: 0 }}

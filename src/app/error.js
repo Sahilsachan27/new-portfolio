@@ -63,7 +63,7 @@ export default function Error({ error, reset }) {
               }}
               className="text-6xl md:text-7xl font-bold mb-4"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-500 to-red-600 glow-text">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-green-500 to-red-600 glow-text">
                 Oops!
               </span>
             </motion.div>
@@ -121,7 +121,7 @@ export default function Error({ error, reset }) {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="glass-effect text-white px-8 py-3 rounded-full font-medium text-base border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 flex items-center gap-2 group"
+                className="glass-effect text-white px-8 py-3 rounded-full font-medium text-base border border-green-500/30 hover:border-green-500/50 transition-all duration-300 flex items-center gap-2 group"
               >
                 <IconHome
                   size={20}

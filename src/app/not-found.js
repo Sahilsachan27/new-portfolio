@@ -20,17 +20,17 @@ export default function NotFound() {
 
       {/* Floating Orbs */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-4 h-4 bg-orange-500/20 rounded-full blur-sm float-animation"></div>
+        <div className="absolute top-20 left-10 w-4 h-4 bg-green-500/20 rounded-full blur-sm float-animation"></div>
         <div
-          className="absolute top-40 right-20 w-6 h-6 bg-orange-400/15 rounded-full blur-sm float-animation"
+          className="absolute top-40 right-20 w-6 h-6 bg-green-400/15 rounded-full blur-sm float-animation"
           style={{ animationDelay: "2s" }}
         ></div>
         <div
-          className="absolute bottom-32 left-20 w-3 h-3 bg-orange-600/25 rounded-full blur-sm float-animation"
+          className="absolute bottom-32 left-20 w-3 h-3 bg-green-600/25 rounded-full blur-sm float-animation"
           style={{ animationDelay: "4s" }}
         ></div>
         <div
-          className="absolute bottom-20 right-10 w-5 h-5 bg-orange-500/10 rounded-full blur-sm float-animation"
+          className="absolute bottom-20 right-10 w-5 h-5 bg-green-500/10 rounded-full blur-sm float-animation"
           style={{ animationDelay: "6s" }}
         ></div>
       </div>
@@ -57,7 +57,7 @@ export default function NotFound() {
               }}
               className="text-8xl md:text-9xl font-bold mb-4"
             >
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 glow-text">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-red-500 to-pink-600 glow-text">
                 404
               </span>
             </motion.div>
@@ -70,7 +70,7 @@ export default function NotFound() {
             >
               <IconError404
                 size={64}
-                className="text-orange-500/60 glow-text"
+                className="text-green-500/60 glow-text"
               />
             </motion.div>
           </motion.div>
@@ -119,7 +119,7 @@ export default function NotFound() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => window.history.back()}
-              className="glass-effect text-white px-8 py-3 rounded-full font-medium text-base border border-orange-500/30 hover:border-orange-500/50 transition-all duration-300 flex items-center gap-2 group"
+              className="glass-effect text-white px-8 py-3 rounded-full font-medium text-base border border-green-500/30 hover:border-green-500/50 transition-all duration-300 flex items-center gap-2 group"
             >
               <IconArrowLeft
                 size={20}
@@ -134,9 +134,9 @@ export default function NotFound() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
-            className="mt-12 glass-effect p-6 rounded-2xl border border-orange-500/20 max-w-md mx-auto"
+            className="mt-12 glass-effect p-6 rounded-2xl border border-green-500/20 max-w-md mx-auto"
           >
-            <h3 className="text-lg font-semibold text-orange-400 mb-3">
+            <h3 className="text-lg font-semibold text-green-400 mb-3">
               💡 Fun Fact
             </h3>
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -156,7 +156,7 @@ export default function NotFound() {
               rotate: { duration: 20, repeat: Infinity, ease: "linear" },
               scale: { duration: 3, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute top-20 right-20 w-16 h-16 border-2 border-orange-500/20 rounded-full hidden md:block"
+            className="absolute top-20 right-20 w-16 h-16 border-2 border-green-500/20 rounded-full hidden md:block"
           />
 
           <motion.div
@@ -168,7 +168,7 @@ export default function NotFound() {
               rotate: { duration: 15, repeat: Infinity, ease: "linear" },
               scale: { duration: 4, repeat: Infinity, ease: "easeInOut" },
             }}
-            className="absolute bottom-20 left-20 w-12 h-12 border-2 border-orange-400/20 rounded-full hidden md:block"
+            className="absolute bottom-20 left-20 w-12 h-12 border-2 border-green-400/20 rounded-full hidden md:block"
           />
         </div>
       </div>

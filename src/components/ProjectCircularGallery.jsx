@@ -147,7 +147,7 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
             >
               {/* Your existing project card styling */}
               <motion.div
-                className="bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800/60 group hover:border-orange-500/40 transition-all duration-300 overflow-hidden h-[550px] flex flex-col"
+                className="bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-800/60 group hover:border-green-500/40 transition-all duration-300 overflow-hidden h-[550px] flex flex-col"
                 whileHover={{
                   y: -8,
                   scale: isActive ? 1.02 : scale * 1.02,
@@ -172,14 +172,14 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
 
                   {/* Click to enlarge indicator */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/20">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
+                    <div className="bg-[#F6F7F4]/90 backdrop-blur-sm rounded-full p-2">
                       <IconExternalLink className="w-5 h-5 text-gray-800" />
                     </div>
                   </div>
 
                   {/* Project Title Overlay */}
                   <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors leading-tight">
+                    <h3 className="text-xl font-bold text-white group-hover:text-green-400 transition-colors leading-tight">
                       {project.title}
                     </h3>
                   </div>
@@ -195,7 +195,7 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
                         .filter(Boolean)
                         .map((sentence, i) => (
                           <span key={i} className="flex items-start gap-2 mb-2">
-                            <span className="w-1.5 h-1.5 bg-orange-400 rounded-full mt-2 flex-shrink-0"></span>
+                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mt-2 flex-shrink-0"></span>
                             <span>{sentence.trim()}</span>
                           </span>
                         ))}
@@ -239,12 +239,12 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gray-800/60 hover:bg-gray-700/60 rounded-lg border border-gray-700/40 hover:border-orange-500/40 transition-all duration-300 group/link"
+                        className="flex items-center gap-2 px-4 py-2 bg-gray-800/60 hover:bg-gray-700/60 rounded-lg border border-gray-700/40 hover:border-green-500/40 transition-all duration-300 group/link"
                         title="View Code"
                       >
                         <IconBrandGithub
                           size={16}
-                          className="text-gray-400 group-hover/link:text-orange-400 transition-colors"
+                          className="text-gray-400 group-hover/link:text-green-400 transition-colors"
                         />
                         <span className="text-gray-300 group-hover/link:text-white text-sm font-medium">
                           GitHub
@@ -254,12 +254,12 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
                         href={project.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-gray-800/60 hover:bg-gray-700/60 rounded-lg border border-gray-700/40 hover:border-orange-500/40 transition-all duration-300 group/link"
+                        className="flex items-center gap-2 px-4 py-2 bg-gray-800/60 hover:bg-gray-700/60 rounded-lg border border-gray-700/40 hover:border-green-500/40 transition-all duration-300 group/link"
                         title="Live Demo"
                       >
                         <IconExternalLink
                           size={16}
-                          className="text-gray-400 group-hover/link:text-orange-400 transition-colors"
+                          className="text-gray-400 group-hover/link:text-green-400 transition-colors"
                         />
                         <span className="text-gray-300 group-hover/link:text-white text-sm font-medium">
                           Live Demo
@@ -289,7 +289,7 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
             }}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentIndex
-                ? "bg-orange-500 w-6"
+                ? "bg-green-500 w-6"
                 : "bg-gray-600 hover:bg-gray-500"
             }`}
           />
@@ -307,7 +307,7 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
             behavior: "smooth",
           });
         }}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/80 p-3 rounded-full border border-gray-700/40 hover:border-orange-500/40 transition-all duration-300"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/80 p-3 rounded-full border border-gray-700/40 hover:border-green-500/40 transition-all duration-300"
         disabled={currentIndex === 0}
       >
         <svg
@@ -335,7 +335,7 @@ const ProjectCircularGallery = ({ projects, getTechIconAndColor }) => {
             behavior: "smooth",
           });
         }}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/80 p-3 rounded-full border border-gray-700/40 hover:border-orange-500/40 transition-all duration-300"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800/80 hover:bg-gray-700/80 p-3 rounded-full border border-gray-700/40 hover:border-green-500/40 transition-all duration-300"
         disabled={currentIndex === projects.length - 1}
       >
         <svg

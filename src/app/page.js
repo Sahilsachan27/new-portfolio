@@ -56,21 +56,21 @@ export default function Home() {
   // Function to get tech icon and color
   const getTechIconAndColor = (tech) => {
     const techMap = {
-      React: { icon: IconBrandReact, color: 'text-cyan-400' },
+      React: { icon: IconBrandReact, color: 'text-emerald-400' },
       'Next.js': { icon: IconBrandNextjs, color: 'text-white' },
       'Node.js': { icon: IconBrandNodejs, color: 'text-green-500' },
       JavaScript: { icon: IconBrandJavascript, color: 'text-yellow-400' },
-      Python: { icon: IconBrandPython, color: 'text-blue-400' },
-      'Tailwind CSS': { icon: IconBrandTailwind, color: 'text-cyan-400' },
-      RapidAPI: { icon: IconApi, color: 'text-blue-400' },
+      Python: { icon: IconBrandPython, color: 'text-emerald-400' },
+      'Tailwind CSS': { icon: IconBrandTailwind, color: 'text-emerald-400' },
+      RapidAPI: { icon: IconApi, color: 'text-emerald-400' },
       'Socket.io': { icon: IconBrandSocketIo, color: 'text-white' },
       Flask: { icon: IconFlask, color: 'text-gray-300' },
-      Docker: { icon: IconBrandDocker, color: 'text-blue-400' },
+      Docker: { icon: IconBrandDocker, color: 'text-emerald-400' },
       Express: { icon: IconServer, color: 'text-gray-300' },
       JWT: { icon: IconWorldWww, color: 'text-gray-400' },
       OpenAI: { icon: IconBolt, color: 'text-green-400' },
       'Framer Motion': { icon: IconBolt, color: 'text-pink-500' },
-      Pandas: { icon: IconChartBar, color: 'text-blue-400' },
+      Pandas: { icon: IconChartBar, color: 'text-emerald-400' },
     }
 
     return techMap[tech] || { icon: IconCode, color: 'text-gray-400' }
@@ -87,9 +87,9 @@ export default function Home() {
   const skillLogos = [
     {
       node: (
-        <div className="flex items-center gap-2 sm:gap-3 glass-effect px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-cyan-400/30 glow-box group hover:border-cyan-400/50 transition-all duration-300">
+        <div className="flex items-center gap-2 sm:gap-3 glass-effect px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-emerald-400/30 glow-box group hover:border-emerald-400/50 transition-all duration-300">
           <IconBrandReact
-            className="text-cyan-400 glow-text group-hover:scale-110 transition-transform duration-300"
+            className="text-emerald-400 glow-text group-hover:scale-110 transition-transform duration-300"
             size={24}
           />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
@@ -116,7 +116,7 @@ export default function Home() {
     {
       node: (
         <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-700/30">
-          <IconBrandHtml5 className="text-orange-500" size={24} />
+          <IconBrandHtml5 className="text-green-500" size={24} />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
             HTML
           </span>
@@ -127,7 +127,7 @@ export default function Home() {
     {
       node: (
         <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-700/30">
-          <IconBrandCss3 className="text-blue-500" size={24} />
+          <IconBrandCss3 className="text-emerald-500" size={24} />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
             CSS
           </span>
@@ -138,7 +138,7 @@ export default function Home() {
     {
       node: (
         <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-700/30">
-          <IconBrandTailwind className="text-teal-400" size={24} />
+          <IconBrandTailwind className="text-green-400" size={24} />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
             Tailwind CSS
           </span>
@@ -171,7 +171,7 @@ export default function Home() {
     {
       node: (
         <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-700/30">
-          <IconApi className="text-orange-400" size={24} />
+          <IconApi className="text-green-400" size={24} />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
             Postman
           </span>
@@ -182,7 +182,7 @@ export default function Home() {
     {
       node: (
         <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-gray-700/30">
-          <IconBrandPython className="text-blue-400" size={24} />
+          <IconBrandPython className="text-emerald-400" size={24} />
           <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
             Python
           </span>
@@ -240,6 +240,17 @@ export default function Home() {
   ]
 
   const projects = [
+    {
+      title: 'Attendify – AI-Powered Smart Attendance System',
+      description:
+        '• Engineered a facial recognition-based attendance system using Python, OpenCV, and DeepFace, achieving ~95% accuracy. • Built a full-stack solution with React, Flask, and MongoDB Atlas with JWT authentication and Cloudinary storage. • Deployed as an Android APK via Capacitor with camera access and GPS geo-fencing.',
+      image: '/attendify.png',
+      tech: ['React', 'Flask', 'Python', 'OpenCV', 'MongoDB', 'Capacitor'],
+      github: 'https://github.com/Sahilsachan27',
+      live: 'https://attendifyy.in/',
+      apk: 'https://github.com/Sahilsachan27/attendifyy-mobile/releases/tag/v1.0', // <-- Add your mobile app link here
+    },
+
     {
       title: 'WorkWayFinder – Real-Time Employee Location Tracking System',
       description:
@@ -351,7 +362,7 @@ export default function Home() {
   return (
     <>
       <ResponsiveNavbar />
-      <main className="min-h-screen bg-black">
+      <main className="min-h-screen bg-[#F6F7F4]">
         {/* Hero Section */}
         <HeroSection />
 
@@ -361,19 +372,19 @@ export default function Home() {
           className="py-20 px-4 relative overflow-hidden particles-container"
         >
           {/* Enhanced Background Elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(255,107,53,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(247,147,30,0.15),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,53,0.05),transparent_70%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F6F7F4] via-emerald-50 to-[#F6F7F4]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(107,142,35,0.05),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(132,169,140,0.05),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(107,142,35,0.02),transparent_70%)]" />
 
           {/* Floating Elements */}
-          <div className="absolute top-10 left-10 w-2 h-2 bg-orange-500/30 rounded-full blur-sm float-animation"></div>
+          <div className="absolute top-10 left-10 w-2 h-2 bg-emerald-500/20 rounded-full blur-sm float-animation"></div>
           <div
-            className="absolute top-32 right-20 w-3 h-3 bg-orange-400/20 rounded-full blur-sm float-animation"
+            className="absolute top-32 right-20 w-3 h-3 bg-green-400/15 rounded-full blur-sm float-animation"
             style={{ animationDelay: '1s' }}
           ></div>
           <div
-            className="absolute bottom-20 left-1/4 w-1 h-1 bg-orange-600/40 rounded-full blur-sm float-animation"
+            className="absolute bottom-20 left-1/4 w-1 h-1 bg-emerald-400/20 rounded-full blur-sm float-animation"
             style={{ animationDelay: '3s' }}
           ></div>
 
@@ -385,13 +396,13 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-6">
                 About{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   Me
                 </span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-600 mx-auto rounded-full" />
             </motion.div>
 
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -402,45 +413,45 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="space-y-4 sm:space-y-6"
               >
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-white">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#1F2933]">
                   Passionate Full-Stack Developer
                 </h3>
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="text-slate-700 text-lg leading-relaxed">
                   Final-year BCA student specializing in full-stack development
                   and AI-driven applications. Skilled in building scalable
                   systems using{' '}
-                  <strong className="text-white font-bold">React</strong>,{' '}
-                  <strong className="text-white font-bold">Node.js</strong>, and{' '}
-                  <strong className="text-white font-bold">MySQL</strong>.
+                  <strong className="text-[#1F2933] font-bold">React</strong>,{' '}
+                  <strong className="text-[#1F2933] font-bold">Node.js</strong>, and{' '}
+                  <strong className="text-[#1F2933] font-bold">MySQL</strong>.
                   Passionate about problem-solving, clean architecture, and
                   currently exploring{' '}
-                  <strong className="text-white font-bold">Agentic AI</strong>{' '}
+                  <strong className="text-[#1F2933] font-bold">Agentic AI</strong>{' '}
                   to create intelligent and autonomous digital solutions.
                 </p>
 
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="text-slate-700 text-lg leading-relaxed">
                   My expertise spans frontend development with{' '}
-                  <strong className="text-white font-bold">React</strong> and{' '}
-                  <strong className="text-white font-bold">Next.js</strong>,
+                  <strong className="text-[#1F2933] font-bold">React</strong> and{' '}
+                  <strong className="text-[#1F2933] font-bold">Next.js</strong>,
                   backend engineering with{' '}
-                  <strong className="text-white font-bold">Node.js</strong>, and
+                  <strong className="text-[#1F2933] font-bold">Node.js</strong>, and
                   efficient data handling using{' '}
-                  <strong className="text-white font-bold">MySQL</strong>. I
+                  <strong className="text-[#1F2933] font-bold">MySQL</strong>. I
                   enjoy building real-world applications such as{' '}
-                  <strong className="text-white font-bold">
+                  <strong className="text-[#1F2933] font-bold">
                     WorkWayFinder
                   </strong>{' '}
                   — a live employee tracking system — and{' '}
-                  <strong className="text-white font-bold">Friday AI</strong>,
+                  <strong className="text-[#1F2933] font-bold">Friday AI</strong>,
                   my personal virtual assistant project.
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <div className="flex items-center gap-2 text-orange-400">
+                  <div className="flex items-center gap-2 text-green-600">
                     <IconMapPin size={20} />
                     <span>Kanpur, India</span>
                   </div>
-                  <div className="flex items-center gap-2 text-orange-400">
+                  <div className="flex items-center gap-2 text-green-600">
                     <IconMail size={20} />
                     <span>Available for hire</span>
                   </div>
@@ -460,14 +471,14 @@ export default function Home() {
                 ].map((stat, index) => (
                   <motion.div
                     key={index}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-xl p-4 sm:p-6 text-center border border-gray-700/30"
+                    className="bg-[#F6F7F4]/60 backdrop-blur-xl rounded-2xl p-4 sm:p-6 text-center border border-white max-w-sm shadow-xl shadow-emerald-900/5 hover:shadow-2xl hover:bg-[#F6F7F4]"
                     whileHover={{ scale: 1.05, y: -5 }}
                     transition={{ type: 'spring', stiffness: 300 }}
                   >
-                    <h4 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                    <h4 className="text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                       {stat.number}
                     </h4>
-                    <p className="text-gray-300 mt-2 text-sm sm:text-base">
+                    <p className="text-slate-700 mt-2 text-sm sm:text-base font-medium">
                       {stat.label}
                     </p>
                   </motion.div>
@@ -480,9 +491,9 @@ export default function Home() {
         {/* Education Section */}
         <section id="education" className="py-20 px-4 relative overflow-hidden">
           {/* Background Elements */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(255,107,53,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(247,147,30,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-[#F6F7F4] to-slate-50" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_40%,rgba(107,142,35,0.05),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_60%,rgba(132,169,140,0.05),transparent_50%)]" />
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <motion.div
@@ -492,24 +503,24 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-6">
                 My{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   Education
                 </span>
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-slate-700 text-lg max-w-2xl mx-auto">
                 My{' '}
-                <Highlighter action="underline" color="#FF9800">
+                <Highlighter action="underline" color="#6B8E23">
                   academic journey
                 </Highlighter>{' '}
                 and continuous{' '}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="highlight" color="#CAD2C5">
                   learning path
                 </Highlighter>{' '}
                 in technology
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full mt-6" />
+              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-600 mx-auto rounded-full mt-6" />
             </motion.div>
 
             <div className="space-y-8">
@@ -527,57 +538,57 @@ export default function Home() {
                   {/* Education Card */}
                   <div className="flex-1">
                     <motion.div
-                      className="bg-gradient-to-br from-gray-800/40 to-gray-900/40 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-gray-700/30 hover:border-orange-500/30 transition-all duration-300 group"
+                      className="bg-[#F6F7F4]/60 backdrop-blur-xl rounded-2xl p-6 sm:p-8 border border-white shadow-xl shadow-emerald-900/5 hover:shadow-2xl transition-all duration-300 group"
                       whileHover={{ y: -10, scale: 1.02 }}
                     >
                       <div className="flex items-start gap-4 sm:gap-6">
-                        <div className="p-3 sm:p-4 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-xl">
+                        <div className="p-3 sm:p-4 bg-gradient-to-br from-emerald-500/10 to-green-600/10 rounded-xl">
                           <edu.icon
                             size={28}
-                            className="text-orange-400 sm:w-8 sm:h-8"
+                            className="text-emerald-500 sm:w-8 sm:h-8"
                           />
                         </div>
 
                         <div className="flex-1">
                           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-[#1F2933] group-hover:text-emerald-600 transition-colors">
                               {edu.degree}
                             </h3>
-                            <div className="flex items-center gap-2 text-orange-400 mt-2 lg:mt-0">
+                            <div className="flex items-center gap-2 text-emerald-600 mt-2 lg:mt-0">
                               <IconCalendar size={18} />
-                              <span className="font-medium">{edu.period}</span>
+                              <span className="font-medium text-slate-500">{edu.period}</span>
                             </div>
                           </div>
 
                           <div className="space-y-3 mb-6">
                             <div className="flex flex-col lg:flex-row lg:items-center gap-2">
-                              <h4 className="text-base sm:text-lg font-semibold text-gray-200">
+                              <h4 className="text-base sm:text-lg font-semibold text-slate-700">
                                 {edu.institution}
                               </h4>
-                              <span className="text-sm sm:text-base text-gray-400">
+                              <span className="text-sm sm:text-base text-slate-500">
                                 • {edu.location}
                               </span>
                             </div>
-                            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500/20 to-red-600/20 px-4 py-2 rounded-full border border-orange-500/30">
+                            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500/10 to-green-600/10 px-4 py-2 rounded-full border border-emerald-100">
                               <IconTrophy
                                 size={16}
-                                className="text-orange-400"
+                                className="text-emerald-500"
                               />
-                              <span className="text-orange-300 font-medium">
+                              <span className="text-emerald-700 font-semibold">
                                 {edu.grade}
                               </span>
                             </div>
                           </div>
 
                           <div>
-                            <h5 className="text-gray-300 font-medium mb-3">
+                            <h5 className="text-[#1F2933] font-semibold mb-3">
                               Key Achievements:
                             </h5>
                             <ul className="space-y-2">
                               {edu.achievements.map((achievement, i) => (
                                 <motion.li
                                   key={i}
-                                  className="flex items-center gap-3 text-gray-300"
+                                  className="flex items-center gap-3 text-slate-700"
                                   initial={{ opacity: 0, x: -20 }}
                                   whileInView={{ opacity: 1, x: 0 }}
                                   transition={{
@@ -586,7 +597,7 @@ export default function Home() {
                                   }}
                                   viewport={{ once: true }}
                                 >
-                                  <div className="w-2 h-2 bg-orange-400 rounded-full flex-shrink-0" />
+                                  <div className="w-2 h-2 bg-emerald-400 rounded-full flex-shrink-0" />
                                   <span>{achievement}</span>
                                 </motion.li>
                               ))}
@@ -600,7 +611,7 @@ export default function Home() {
                   {/* Timeline Connector */}
                   <div className="hidden lg:flex flex-col items-center">
                     <motion.div
-                      className="w-4 h-4 border-4 border-orange-500 bg-black rounded-full"
+                      className="w-4 h-4 border-4 border-emerald-400 bg-[#F6F7F4] rounded-full shadow-[0_0_10px_rgba(56,189,248,0.5)]"
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -608,7 +619,7 @@ export default function Home() {
                     />
                     {index < education.length - 1 && (
                       <motion.div
-                        className="w-1 h-32 bg-gradient-to-b from-orange-500 to-transparent"
+                        className="w-1 h-32 bg-gradient-to-b from-emerald-400/50 to-transparent"
                         initial={{ height: 0 }}
                         whileInView={{ height: 128 }}
                         transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
@@ -628,8 +639,8 @@ export default function Home() {
         {/* Skills Section */}
         <section id="skills" className="py-20 px-4 relative overflow-hidden">
           {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,53,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F6F7F4] via-slate-50 to-[#F6F7F4]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(107,142,35,0.05),transparent_50%)]" />
 
           <div className="container mx-auto max-w-6xl relative z-10">
             <motion.div
@@ -639,23 +650,23 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-6">
                 Technical{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   Skills
                 </span>
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-8">
+              <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-8">
                 Here are the{' '}
-                <Highlighter action="underline" color="#FF9800">
+                <Highlighter action="underline" color="#6B8E23">
                   technologies
                 </Highlighter>{' '}
                 and tools I work with to bring{' '}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="highlight" color="#CAD2C5">
                   ideas to life
                 </Highlighter>
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-600 mx-auto rounded-full" />
+              <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-green-600 mx-auto rounded-full" />
             </motion.div>
 
             {/* LogoLoop Skills Animation */}
@@ -676,7 +687,7 @@ export default function Home() {
                   gap={24}
                   pauseOnHover={true}
                   fadeOut={true}
-                  fadeOutColor="rgba(0, 0, 0, 1)"
+                  fadeOutColor="rgba(248, 250, 252, 1)"
                   scaleOnHover={true}
                   ariaLabel="Technical skills"
                   className="py-4"
@@ -692,7 +703,7 @@ export default function Home() {
                   gap={48}
                   pauseOnHover={true}
                   fadeOut={true}
-                  fadeOutColor="rgba(0, 0, 0, 1)"
+                  fadeOutColor="rgba(248, 250, 252, 1)"
                   scaleOnHover={true}
                   ariaLabel="Technical skills"
                   className="py-8"
@@ -717,7 +728,7 @@ export default function Home() {
                   gap={20}
                   pauseOnHover={true}
                   fadeOut={true}
-                  fadeOutColor="rgba(0, 0, 0, 1)"
+                  fadeOutColor="rgba(248, 250, 252, 1)"
                   scaleOnHover={true}
                   ariaLabel="Technical skills reverse"
                   className="py-3 opacity-75"
@@ -733,7 +744,7 @@ export default function Home() {
                   gap={40}
                   pauseOnHover={true}
                   fadeOut={true}
-                  fadeOutColor="rgba(0, 0, 0, 1)"
+                  fadeOutColor="rgba(248, 250, 252, 1)"
                   scaleOnHover={true}
                   ariaLabel="Technical skills reverse"
                   className="py-6 opacity-75"
@@ -745,7 +756,7 @@ export default function Home() {
 
         {/* Projects Section */}
         <section id="projects" className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-900" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-[#F6F7F4] to-slate-50" />
 
           <div className="container mx-auto max-w-7xl relative z-10">
             <motion.div
@@ -755,23 +766,23 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-6">
                 Interactive{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   Project Showcase
                 </span>
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-4">
+              <p className="text-slate-700 text-lg max-w-2xl mx-auto mb-4">
                 Explore my{' '}
-                <Highlighter action="underline" color="#FF9800">
+                <Highlighter action="underline" color="#6B8E23">
                   portfolio projects
                 </Highlighter>{' '}
                 with interactive{' '}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="highlight" color="#CAD2C5">
                   following pointer effects
                 </Highlighter>
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-slate-500 text-sm">
                 Hover over any card to experience the magic ✨
               </p>
             </motion.div>
@@ -796,7 +807,7 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="py-20 px-4 relative">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#F6F7F4] via-slate-50 to-[#F6F7F4]" />
 
           <div className="container mx-auto max-w-4xl relative z-10">
             <motion.div
@@ -806,19 +817,19 @@ export default function Home() {
               viewport={{ once: true }}
               className="text-center mb-16"
             >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-[#1F2933] mb-6">
                 Let&apos;s{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">
                   Connect
                 </span>
               </h2>
-              <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              <p className="text-slate-700 text-lg max-w-2xl mx-auto">
                 Ready to bring your{' '}
-                <Highlighter action="underline" color="#FF9800">
+                <Highlighter action="underline" color="#6B8E23">
                   ideas to life
                 </Highlighter>
                 ? Let&apos;s discuss your{' '}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="highlight" color="#CAD2C5">
                   next project
                 </Highlighter>
               </p>
@@ -833,44 +844,34 @@ export default function Home() {
                 className="space-y-6 sm:space-y-8"
               >
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-semibold text-white mb-6">
+                  <h3 className="text-xl sm:text-2xl font-semibold text-[#1F2933] mb-6">
                     Get in Touch
                   </h3>
                   <div className="space-y-4">
-                    <div className="flex items-center gap-3 sm:gap-4 text-gray-300">
-                      <div className="p-2 sm:p-3 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-lg">
+                    <div className="flex items-center gap-3 sm:gap-4 text-slate-700">
+                      <div className="p-2 sm:p-3 bg-gradient-to-br from-emerald-500/10 to-green-600/10 rounded-lg">
                         <IconMail
                           size={18}
-                          className="text-orange-400 sm:w-5 sm:h-5"
+                          className="text-emerald-600 sm:w-5 sm:h-5"
                         />
                       </div>
                       <div>
                         <p className="font-medium text-sm sm:text-base">
                           Email
                         </p>
-                        <p className="text-orange-400 text-sm sm:text-base break-all">
+                        <p className="text-emerald-600 text-sm sm:text-base break-all">
                           sahilsachan755@gmail.com
                         </p>
                       </div>
                     </div>
 
-                    {/* <div className="flex items-center gap-4 text-gray-300">
-                      <div className="p-3 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-lg">
-                        <IconPhone size={20} className="text-orange-400" />
-                      </div>
-                      <div>
-                        <p className="font-medium">Phone</p>
-                        <p className="text-orange-400">+91 93397 12883</p>
-                      </div>
-                    </div> */}
-
-                    <div className="flex items-center gap-4 text-gray-300">
-                      <div className="p-3 bg-gradient-to-br from-orange-500/20 to-red-600/20 rounded-lg">
-                        <IconMapPin size={20} className="text-orange-400" />
+                    <div className="flex items-center gap-4 text-slate-700">
+                      <div className="p-3 bg-gradient-to-br from-emerald-500/10 to-green-600/10 rounded-lg">
+                        <IconMapPin size={20} className="text-emerald-600" />
                       </div>
                       <div>
                         <p className="font-medium">Location</p>
-                        <p className="text-orange-400">
+                        <p className="text-emerald-600">
                           Kanpur, Uttar Pradesh, India
                         </p>
                       </div>
@@ -883,36 +884,30 @@ export default function Home() {
                   <motion.a
                     href="https://www.linkedin.com/in/sahilsachan2303/"
                     target="_blank"
-                    className="p-3 bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg 
-               border border-gray-600/30 hover:border-orange-500/50 
-               transition-all duration-300"
+                    className="p-3 bg-[#F6F7F4] rounded-lg border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-md transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                   >
-                    <IconBrandLinkedin size={24} className="text-orange-400" />
+                    <IconBrandLinkedin size={24} className="text-emerald-600" />
                   </motion.a>
 
                   {/* GitHub */}
                   <motion.a
                     href="https://github.com/sahilsachan27"
                     target="_blank"
-                    className="p-3 bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg 
-               border border-gray-600/30 hover:border-orange-500/50 
-               transition-all duration-300"
+                    className="p-3 bg-[#F6F7F4] rounded-lg border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-md transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                   >
-                    <IconBrandGithub size={24} className="text-orange-400" />
+                    <IconBrandGithub size={24} className="text-emerald-600" />
                   </motion.a>
 
                   {/* Instagram */}
                   <motion.a
                     href="https://www.instagram.com/sahil_sachan2303/"
                     target="_blank"
-                    className="p-3 bg-gradient-to-br from-gray-700/50 to-gray-800/50 rounded-lg 
-               border border-gray-600/30 hover:border-orange-500/50 
-               transition-all duration-300"
+                    className="p-3 bg-[#F6F7F4] rounded-lg border border-slate-200 hover:border-emerald-500 shadow-sm hover:shadow-md transition-all duration-300"
                     whileHover={{ scale: 1.1, y: -2 }}
                   >
-                    <IconBrandInstagram size={24} className="text-orange-400" />
+                    <IconBrandInstagram size={24} className="text-emerald-600" />
                   </motion.a>
                 </div>
               </motion.div>
@@ -922,7 +917,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm rounded-xl p-8 border border-gray-700/30"
+                className="bg-[#F6F7F4]/80 backdrop-blur-xl rounded-xl p-8 border border-white shadow-xl shadow-emerald-900/5"
               >
                 <ContactForm />
               </motion.div>
@@ -931,9 +926,9 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 border-t border-gray-800">
+        <footer className="py-8 px-4 border-t border-slate-200">
           <div className="container mx-auto max-w-6xl text-center">
-            <p className="text-gray-400">
+            <p className="text-slate-500">
               © 2025 Sahil Sachan. All rights reserved.
             </p>
           </div>

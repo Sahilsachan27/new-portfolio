@@ -279,11 +279,11 @@ export default function GitHubInsights() {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      className="bg-gray-800/50 border border-gray-700/30 rounded-lg p-6 text-center backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300"
+      className="bg-[#F6F7F4]/60 border border-white rounded-lg p-6 text-center backdrop-blur-sm hover:bg-[#F6F7F4] transition-all duration-300 shadow-md shadow-emerald-900/5 hover:shadow-lg hover:-translate-y-1"
     >
       <div className="text-2xl mb-2">{icon}</div>
-      <div className="text-2xl font-bold text-orange-400 mb-1">{value}</div>
-      <div className="text-gray-300 text-sm">{title}</div>
+      <div className="text-2xl font-bold text-emerald-600 mb-1">{value}</div>
+      <div className="text-slate-700 text-sm">{title}</div>
     </motion.div>
   );
 
@@ -343,10 +343,10 @@ export default function GitHubInsights() {
         className="mb-4"
       >
         <div className="flex items-center justify-between mb-2">
-          <span className="text-white font-medium text-sm">{language}</span>
-          <span className="text-gray-400 text-xs">{count} repos</span>
+          <span className="text-[#1F2933] font-medium text-sm">{language}</span>
+          <span className="text-slate-500 text-xs">{count} repos</span>
         </div>
-        <div className="w-full bg-gray-700/40 rounded-full h-2">
+        <div className="w-full bg-slate-200 rounded-full h-2">
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: `${percentage}%` }}
@@ -355,7 +355,7 @@ export default function GitHubInsights() {
             style={{ backgroundColor: color }}
           />
         </div>
-        <div className="text-xs text-gray-500 mt-1">{percentage}%</div>
+        <div className="text-xs text-slate-500 mt-1">{percentage}%</div>
       </motion.div>
     );
   };
@@ -369,11 +369,11 @@ export default function GitHubInsights() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       whileHover={{ scale: 1.02 }}
-      className="block bg-gray-800/50 border border-gray-700/30 rounded-lg p-4 hover:bg-gray-800/70 transition-all duration-300"
+      className="block bg-[#F6F7F4]/60 border border-white rounded-lg p-4 hover:bg-[#F6F7F4] transition-all duration-300 shadow-sm hover:shadow-md hover:border-emerald-500/20"
     >
       <div className="flex items-start justify-between mb-2">
-        <h3 className="font-semibold text-white truncate">{repo.name}</h3>
-        <div className="flex items-center gap-2 text-sm text-gray-400">
+        <h3 className="font-semibold text-[#1F2933] truncate">{repo.name}</h3>
+        <div className="flex items-center gap-2 text-sm text-slate-500">
           <span className="flex items-center gap-1">
             ⭐ {repo.stargazers_count}
           </span>
@@ -382,31 +382,31 @@ export default function GitHubInsights() {
       </div>
       <div className="mb-3">
         <div className="flex items-center justify-between mb-2">
-          <span className="text-xs text-gray-500 flex items-center gap-1">
+          <span className="text-xs text-slate-500 flex items-center gap-1">
             📄 README Preview
           </span>
           {repo.hasRealReadme && (
-            <span className="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded">
+            <span className="text-xs text-emerald-600 bg-emerald-50 px-2 py-1 rounded">
               Live Docs
             </span>
           )}
         </div>
-        <p className="text-gray-300 text-sm line-clamp-4 leading-relaxed">
+        <p className="text-slate-700 text-sm line-clamp-4 leading-relaxed">
           {repo.readmePreview}
           {repo.readmePreview && repo.readmePreview.length >= 280 && "..."}
         </p>
         {/* Debug info - remove in production */}
         {process.env.NODE_ENV === "development" && (
-          <div className="text-xs text-gray-600 mt-1">
+          <div className="text-xs text-slate-400 mt-1">
             Real README: {repo.hasRealReadme ? "Yes" : "No"} | Length:{" "}
             {repo.readmePreview?.length || 0}
           </div>
         )}
       </div>
-      <div className="flex items-center justify-between text-xs text-gray-400">
+      <div className="flex items-center justify-between text-xs text-slate-500">
         {repo.language && (
           <span className="flex items-center gap-1">
-            <div className="w-2 h-2 rounded-full bg-orange-400"></div>
+            <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
             {repo.language}
           </span>
         )}
@@ -419,11 +419,11 @@ export default function GitHubInsights() {
     return (
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
-            GitHub <span className="text-orange-500">Insights</span>
+          <h2 className="text-4xl font-bold text-center text-[#1F2933] mb-12">
+            GitHub <span className="text-emerald-600">Insights</span>
           </h2>
           <div className="flex justify-center items-center h-32">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500"></div>
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500"></div>
           </div>
         </div>
       </section>
@@ -434,10 +434,10 @@ export default function GitHubInsights() {
     return (
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">
-            GitHub <span className="text-orange-500">Insights</span>
+          <h2 className="text-4xl font-bold text-center text-[#1F2933] mb-12">
+            GitHub <span className="text-emerald-600">Insights</span>
           </h2>
-          <div className="text-center text-red-400">
+          <div className="text-center text-red-500">
             <p>Error loading GitHub data: {error}</p>
           </div>
         </div>
@@ -448,22 +448,22 @@ export default function GitHubInsights() {
   if (!githubData) return null;
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-gray-900/50 to-gray-800/30">
+    <section className="py-20 px-4 bg-gradient-to-b from-slate-50 to-[#F6F7F4]">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center text-white mb-4"
+          className="text-4xl font-bold text-center text-[#1F2933] mb-4"
         >
-          GitHub <span className="text-orange-500">Insights</span>
+          GitHub <span className="text-emerald-600">Insights</span>
         </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-gray-300 text-center mb-12 max-w-2xl mx-auto"
+          className="text-slate-700 text-center mb-12 max-w-2xl mx-auto"
         >
           A glimpse into my coding journey and contributions to the open-source
           community
@@ -515,9 +515,9 @@ export default function GitHubInsights() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-800/30 border border-gray-700/30 rounded-xl p-6 backdrop-blur-sm"
+            className="bg-[#F6F7F4]/80 border border-white rounded-xl p-6 backdrop-blur-sm shadow-xl shadow-emerald-900/5"
           >
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-[#1F2933] mb-4 flex items-center gap-2">
               🚀 Top Languages
             </h3>
             <div className="space-y-1">
@@ -538,25 +538,25 @@ export default function GitHubInsights() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-800/30 border border-gray-700/30 rounded-xl p-6 backdrop-blur-sm"
+            className="bg-[#F6F7F4]/80 border border-white rounded-xl p-6 backdrop-blur-sm shadow-xl shadow-emerald-900/5"
           >
             <div className="flex items-center gap-4 mb-4">
               <img
                 src={githubData.user.avatar_url}
                 alt="GitHub Avatar"
-                className="w-16 h-16 rounded-full border-2 border-orange-500/30"
+                className="w-16 h-16 rounded-full border-2 border-emerald-500/30"
               />
               <div>
-                <h3 className="text-xl font-semibold text-white">
+                <h3 className="text-xl font-semibold text-[#1F2933]">
                   {githubData.user.name}
                 </h3>
-                <p className="text-orange-400">@{githubData.user.login}</p>
+                <p className="text-emerald-600">@{githubData.user.login}</p>
               </div>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
+            <p className="text-slate-700 text-sm mb-4">
               {githubData.user.bio || "No bio available"}
             </p>
-            <div className="text-sm text-gray-400">
+            <div className="text-sm text-slate-500">
               <p>📍 {githubData.user.location || "Location not specified"}</p>
               <p>
                 📅 Joined{" "}
@@ -570,33 +570,33 @@ export default function GitHubInsights() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-gray-800/30 border border-gray-700/30 rounded-xl p-6 backdrop-blur-sm"
+            className="bg-[#F6F7F4]/80 border border-white rounded-xl p-6 backdrop-blur-sm shadow-xl shadow-emerald-900/5"
           >
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-[#1F2933] mb-4 flex items-center gap-2">
               📊 Quick Stats
             </h3>
             <div className="space-y-3">
               <div className="flex justify-between">
-                <span className="text-gray-300">Total Repositories</span>
-                <span className="text-orange-400 font-semibold">
+                <span className="text-slate-700">Total Repositories</span>
+                <span className="text-emerald-600 font-semibold">
                   {githubData.totalRepos}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Stars Earned</span>
-                <span className="text-orange-400 font-semibold">
+                <span className="text-slate-700">Stars Earned</span>
+                <span className="text-emerald-600 font-semibold">
                   {githubData.totalStars}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Forks Created</span>
-                <span className="text-orange-400 font-semibold">
+                <span className="text-slate-700">Forks Created</span>
+                <span className="text-emerald-600 font-semibold">
                   {githubData.totalForks}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span className="text-gray-300">Network</span>
-                <span className="text-orange-400 font-semibold">
+                <span className="text-slate-700">Network</span>
+                <span className="text-emerald-600 font-semibold">
                   {githubData.followers + githubData.following}
                 </span>
               </div>
@@ -615,7 +615,7 @@ export default function GitHubInsights() {
             href={`https://github.com/${githubData.user.login}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-green-700 transition-all duration-300 hover:scale-105 shadow-md"
           >
             <span>👨‍💻</span>
             View Full GitHub Profile

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sahil | Portfolio</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "olive": "#6B8E23",
+                      "sage": "#84A98C",
+                      "premium-bg": "#F9FAF7",
+                      "on-primary-container": "#fdfcff",
+                      "primary-container": "#007bb9",
+                      "outline-variant": "#bfc7d2",
+                      "on-primary-fixed": "#001d31",
+                      "on-secondary-fixed": "#001f28",
+                      "surface-bright": "#f8f9ff",
+                      "surface-variant": "#d3e4fe",
+                      "secondary-fixed-dim": "#6cd3f7",
+                      "inverse-surface": "#213145",
+                      "on-secondary-container": "#006077",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#fffbff",
+                      "secondary": "#006780",
+                      "on-error-container": "#93000a",
+                      "tertiary-container": "#ac6200",
+                      "on-secondary-fixed-variant": "#004e61",
+                      "secondary-fixed": "#b7eaff",
+                      "on-tertiary-fixed": "#2d1600",
+                      "tertiary-fixed": "#ffdcc0",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#f8f9ff",
+                      "surface-container-highest": "#d3e4fe",
+                      "outline": "#707881",
+                      "on-secondary": "#ffffff",
+                      "tertiary-fixed-dim": "#ffb875",
+                      "on-tertiary-fixed-variant": "#6b3b00",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#eff4ff",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#cce5ff",
+                      "surface-dim": "#cbdbf5",
+                      "surface-container": "#e5eeff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-tint": "#006398",
+                      "background": "#f8f9ff",
+                      "on-background": "#0b1c30",
+                      "on-primary-fixed-variant": "#004b73",
+                      "inverse-primary": "#93ccff",
+                      "surface-container-high": "#dce9ff",
+                      "secondary-container": "#76dcff",
+                      "error": "#ba1a1a",
+                      "tertiary": "#894d00",
+                      "error-container": "#ffdad6",
+                      "on-surface": "#0b1c30",
+                      "primary-fixed-dim": "#93ccff",
+                      "primary": "#006194",
+                      "on-surface-variant": "#3f4850"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "display": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .ambient-shadow {
+            box-shadow: 0 20px 40px -5px rgba(11, 28, 48, 0.06);
+        }
+        .ambient-shadow-hover:hover {
+            box-shadow: 0 30px 60px -10px rgba(11, 28, 48, 0.1);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 10% 20%, rgba(132, 169, 140, 0.05) 0%, rgba(249, 250, 247, 1) 90%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-sage selection:text-white">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-premium-bg/80 backdrop-blur-xl border-b border-sage/10">
+<div class="flex items-center justify-between px-8 py-4 max-w-7xl mx-auto w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-olive" data-icon="architecture">architecture</span>
+<span class="text-2xl font-extrabold tracking-tighter text-slate-900">Sahil</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-['Manrope'] tracking-tight font-medium">
+<a class="text-slate-600 hover:text-olive transition-colors duration-300" href="#about">About</a>
+<a class="text-slate-600 hover:text-olive transition-colors duration-300" href="#projects">Projects</a>
+<a class="text-slate-600 hover:text-olive transition-colors duration-300" href="#skills">Skills</a>
+<button class="bg-olive text-white px-6 py-2 rounded-full font-bold hover:shadow-lg hover:shadow-olive/20 transition-all duration-300">Contact</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-slate-900" data-icon="menu">menu</span>
+</div>
+</div>
+</nav>
+<main>
+<!-- Redesigned Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-24 hero-gradient overflow-hidden">
+<!-- Background Depth Elements -->
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-[800px] h-[800px] bg-sage/5 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/4 w-[600px] h-[600px] bg-olive/5 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-8 w-full">
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage/10 text-olive text-[10px] font-extrabold tracking-widest uppercase mb-8 border border-sage/20">
+<span class="w-2 h-2 rounded-full bg-olive animate-pulse"></span>
+                            Open for collaboration
+                        </div>
+<h1 class="font-display text-6xl md:text-8xl font-extrabold text-slate-900 tracking-tight leading-[0.95] mb-8">
+                            Digital <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-br from-olive to-sage">Craftsmanship</span>
+</h1>
+<p class="text-slate-600 text-xl md:text-2xl max-w-xl leading-relaxed mb-12 font-light">
+                            Synthesizing architectural precision with human-centric design to create enduring digital landscapes.
+                        </p>
+<div class="flex flex-wrap gap-5">
+<a class="bg-olive text-white px-10 py-5 rounded-2xl font-bold shadow-xl shadow-olive/25 hover:shadow-olive/40 hover:-translate-y-1 transition-all duration-500" href="#projects">Explore Works</a>
+<a class="bg-white/50 backdrop-blur-sm text-slate-800 border border-slate-200 px-10 py-5 rounded-2xl font-bold hover:bg-white hover:shadow-lg transition-all duration-500" href="#about">The Philosophy</a>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] max-w-md mx-auto lg:ml-auto">
+<!-- Layered Visual Composition -->
+<div class="absolute inset-0 bg-sage/10 rounded-[3rem] rotate-6 scale-95 blur-sm"></div>
+<div class="absolute inset-0 bg-olive/5 rounded-[3rem] -rotate-3 scale-100"></div>
+<div class="relative h-full w-full rounded-[3rem] overflow-hidden shadow-2xl border border-white/50 bg-white group">
+<img alt="Hero Abstract Visual" class="w-full h-full object-cover grayscale-[0.2] group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC20SFY57ZmeMqIbaBja3ZSGbGgc74QDOZFws4mYqs4ElWmSB86MvfMeC3j_itmFMfl6Z2-y-IyvO8MccpUMlYuFEfOQSSA7vl-xBOca3Jc7gWxzzwe_Kxi2L-P7obAk4jwjeOQjHCJ-fJjWBo_etkqP8mQ_kOPRpCXOIEr7R76aIhp9lHoA6-46VshQu3z-XScDyu95WRpO26_sGzqtb3jsn6ZFJA0TnlALvGAdLJ5gf_DNSgP_CJHubkx-JlmdTUPAkifbYkpXxmE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-olive/40 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8 right-8 p-6 glass-panel rounded-2xl border border-white/40 shadow-lg">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-olive/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-olive" data-icon="token">token</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold text-olive/80">Current Focus</p>
+<p class="text-sm font-bold text-slate-900">Ethereal User Interfaces</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Seamless transition element -->
+<div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-surface-container-low to-transparent"></div>
+</section>
+<!-- About & Education Section (Asymmetric) - UNCHANGED -->
+<section class="py-24 bg-surface-container-low" id="about">
+<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7">
+<h2 class="font-display text-4xl font-bold mb-8 text-on-surface">The Craft Behind The Code</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>I believe that every line of code is an opportunity to create something beautiful. My journey began at the intersection of logic and aesthetics, leading me to develop a style characterized by "Atmospheric Precision."</p>
+<p>With a background in both engineering and design, I approach problems by first understanding the human need, then engineering a robust, scalable solution that feels effortless to use.</p>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl ambient-shadow border border-outline-variant/10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+</div>
+<h3 class="font-display text-xl font-bold">Academic Foundation</h3>
+</div>
+<div class="space-y-4">
+<div>
+<h4 class="font-bold text-on-surface">University of Technology</h4>
+<p class="text-on-surface-variant text-sm">B.S. in Computer Science &amp; Interaction Design</p>
+<p class="text-primary text-xs font-medium mt-1">Class of 2022 • Summa Cum Laude</p>
+</div>
+<div class="pt-4 border-t border-outline-variant/10">
+<h4 class="font-bold text-on-surface">Academy of Digital Arts</h4>
+<p class="text-on-surface-variant text-sm">Certification in Advanced Visual Systems</p>
+<p class="text-primary text-xs font-medium mt-1">2023</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section (Floating Bento Grid) - UNCHANGED -->
+<section class="py-24 bg-surface" id="skills">
+<div class="max-w-7xl mx-auto px-8">
+<div class="mb-16 text-center max-w-2xl mx-auto">
+<h2 class="font-display text-4xl font-bold mb-4">Precision Instruments</h2>
+<p class="text-on-surface-variant">A curated selection of technologies and methodologies I employ to bring visions to life.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Skill Card 1 -->
+<div class="col-span-2 row-span-2 bg-surface-container-lowest p-8 rounded-3xl ambient-shadow-hover transition-all flex flex-col justify-between border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="terminal">terminal</span>
+<div>
+<h3 class="font-bold text-xl mb-2">Frontend Engine</h3>
+<p class="text-sm text-on-surface-variant">React, Next.js, and TypeScript for high-performance interfaces.</p>
+</div>
+</div>
+<!-- Skill Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl ambient-shadow-hover transition-all border border-outline-variant/10 text-center">
+<span class="material-symbols-outlined text-3xl text-secondary mb-4" data-icon="database">database</span>
+<h4 class="font-bold text-sm">Backend</h4>
+</div>
+<!-- Skill Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl ambient-shadow-hover transition-all border border-outline-variant/10 text-center">
+<span class="material-symbols-outlined text-3xl text-tertiary mb-4" data-icon="palette">palette</span>
+<h4 class="font-bold text-sm">UI/UX Design</h4>
+</div>
+<!-- Skill Card 4 -->
+<div class="col-span-2 bg-primary text-on-primary p-8 rounded-3xl ambient-shadow transition-all relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-bold text-xl mb-2">System Architecture</h3>
+<p class="text-sm opacity-90">Designing scalable, resilient cloud infrastructures.</p>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-9xl opacity-10" data-icon="settings_input_component">settings_input_component</span>
+</div>
+<!-- Skill Card 5 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl ambient-shadow-hover transition-all border border-outline-variant/10 text-center">
+<span class="material-symbols-outlined text-3xl text-secondary mb-4" data-icon="animation">animation</span>
+<h4 class="font-bold text-sm">Motion</h4>
+</div>
+<!-- Skill Card 6 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl ambient-shadow-hover transition-all border border-outline-variant/10 text-center">
+<span class="material-symbols-outlined text-3xl text-primary mb-4" data-icon="cloud">cloud</span>
+<h4 class="font-bold text-sm">AWS/Cloud</h4>
+</div>
+<!-- Skill Card 7 -->
+<div class="col-span-2 bg-surface-container-high p-6 rounded-2xl ambient-shadow-hover transition-all border border-outline-variant/10 flex items-center gap-4">
+<span class="material-symbols-outlined text-4xl text-on-surface-variant" data-icon="code">code</span>
+<span class="font-bold">Clean Architecture Specialist</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects Section (Overlapping & Editorial) - UNCHANGED -->
+<section class="py-24 bg-surface-container-low overflow-hidden" id="projects">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-display text-4xl font-bold mb-2">Selected Works</h2>
+<p class="text-on-surface-variant">A showcase of technical complexity and visual harmony.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<span class="px-4 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold">ALL</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-bold">WEB</span>
+<span class="px-4 py-2 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-bold">MOBILE</span>
+</div>
+</div>
+<div class="space-y-32">
+<!-- Project 1 -->
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 relative group">
+<div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative rounded-2xl overflow-hidden ambient-shadow border border-outline-variant/20 bg-white">
+<img alt="Project Flux" class="w-full h-auto" data-alt="Sleek dashboard interface with data visualizations, cyan accents, and translucent cards on a clean light background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSXWWZSNajuXkS4ttEPqmN6alMIwAY1qtnSD9Op8YRPwtGMtO3xb7LrIwRYAkUTTtgq_ctuYiJNRFot1AvN1WWN1QDUoK8q9D_OB_0V4ldAGZ9D82JlVBuMJfHwtagQSIt6iWfG6-KOm0wFknUN4Yd1n1i2Ca27rDr46efA_xFEZvt0obcTCEfo65lpWqyn61uWDwogEjTG1HhXrRvI6Xv5PwShR3NsELfsEG48o0_1z_1TTwi4YxUeJUzIpYmeNaEMHGdWt2XuSeJ"/>
+</div>
+</div>
+<div class="lg:col-span-5">
+<span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">01 / Fintech</span>
+<h3 class="font-display text-4xl font-bold mb-6">Flux Intelligence</h3>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                                A predictive analytics engine for venture capital firms. Real-time data streaming visualized through an ethereal, glassmorphic interface.
+                            </p>
+<div class="flex gap-4 mb-8 flex-wrap">
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">NEXT.JS</span>
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">D3.JS</span>
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">GRAPHQL</span>
+</div>
+<button class="flex items-center gap-2 font-bold text-primary group">
+                                Explore Project 
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Project 2 (Reversed) -->
+<div class="grid lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 order-2 lg:order-1">
+<span class="text-secondary font-bold tracking-widest text-xs uppercase mb-4 block">02 / E-Commerce</span>
+<h3 class="font-display text-4xl font-bold mb-6">Aura Boutique</h3>
+<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">
+                                A high-end fashion platform prioritizing storytelling and immersive photography. Custom-built headless commerce solution.
+                            </p>
+<div class="flex gap-4 mb-8 flex-wrap">
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">SHOPIFY</span>
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">TAILWIND</span>
+<span class="bg-secondary-fixed px-3 py-1 rounded-md text-xs font-bold text-on-secondary-fixed">THREE.JS</span>
+</div>
+<button class="flex items-center gap-2 font-bold text-primary group">
+                                Explore Project 
+                                <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="lg:col-span-7 relative group order-1 lg:order-2">
+<div class="absolute -inset-4 bg-gradient-to-br from-secondary/20 to-primary/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="relative rounded-2xl overflow-hidden ambient-shadow border border-outline-variant/20 bg-white">
+<img alt="Project Aura" class="w-full h-auto" data-alt="Minimalist luxury product page with soft shadows, elegant typography, and ethereal white-on-white photography styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS09KeP3l8Qep40PET6qvHnq4_oVN_9RZCtvYaHk8KriOh9xi9RlZrausxZxdyPhNVnws6iNppkcM0RuYyxra3bosXTQR4C4ty4p2nHVIUo296MpOSMGfF4GOnzIvHCXRXAaVKw0nPkbzrfl_UnzjIKigtxMsDmSQ7o0VH_N_XUsELHX1XUbleeIAvxfc64JOZd89f4E-ZceU5JRNtwK695csEhCygWRh4U1Blo0t8L2cnbxWJNhI-cF_EZzE9DiDn3w0heAsC-thV"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section - UNCHANGED -->
+<section class="py-24 bg-surface relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-fixed/30 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-display text-5xl font-extrabold mb-6 leading-tight">Let's build the <br/><span class="text-primary">next dimension.</span></h2>
+<p class="text-on-surface-variant text-lg mb-10 max-w-md">
+                            Whether you have a specific project in mind or just want to discuss the future of the web, my inbox is always open.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</div>
+<span class="font-bold">hello@sahil.design</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<span class="font-bold">Digital Nomad / Global</span>
+</div>
+</div>
+</div>
+<div class="glass-panel p-10 rounded-3xl ambient-shadow border border-white/40">
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="your@email.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Inquiry</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary focus:bg-surface-container-lowest transition-all" placeholder="How can we collaborate?" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-xl font-bold ambient-shadow hover:scale-[1.02] active:scale-95 transition-all">Send Transmission</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer - UNCHANGED -->
+<footer class="bg-slate-50 w-full py-12 tonal-section-break bg-slate-100">
+<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6 font-['Inter'] text-sm tracking-wide">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-['Manrope'] font-bold text-slate-900 text-xl mb-1">Sahil</span>
+<p class="text-slate-500 text-xs">© 2024 Sahil — Crafted with Atmospheric Precision</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-sky-500 underline-offset-4 hover:underline transition-opacity duration-200" href="#">Projects</a>
+<a class="text-slate-500 hover:text-sky-500 underline-offset-4 hover:underline transition-opacity duration-200" href="#">About</a>
+<a class="text-slate-500 hover:text-sky-500 underline-offset-4 hover:underline transition-opacity duration-200" href="#">Source Code</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors cursor-pointer" data-icon="language">language</span>
+</div>
+</div>
+</footer>
+</body></html>

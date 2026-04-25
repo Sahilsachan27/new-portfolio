@@ -34,7 +34,7 @@ export default function Loading() {
               ],
             }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-600"
+            className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-red-500 to-pink-600"
           >
             SAYAN ADHIKARY
           </motion.h1>
@@ -45,7 +45,7 @@ export default function Loading() {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            className="w-12 h-12 border-3 border-orange-500/30 border-t-orange-500 rounded-full"
+            className="w-12 h-12 border-3 border-green-500/30 border-t-green-500 rounded-full"
           />
         </div>
 
@@ -74,7 +74,7 @@ export default function Loading() {
                 delay: index * 0.2,
                 ease: "easeInOut",
               }}
-              className="w-2 h-2 bg-orange-500 rounded-full"
+              className="w-2 h-2 bg-green-500 rounded-full"
             />
           ))}
         </div>
@@ -91,7 +91,7 @@ export default function Loading() {
               repeat: Infinity,
               ease: "easeInOut",
             }}
-            className="absolute top-20 left-1/4 w-3 h-3 bg-orange-500/20 rounded-full blur-sm"
+            className="absolute top-20 left-1/4 w-3 h-3 bg-green-500/20 rounded-full blur-sm"
           />
           <motion.div
             animate={{
@@ -104,7 +104,7 @@ export default function Loading() {
               delay: 1,
               ease: "easeInOut",
             }}
-            className="absolute bottom-32 right-1/4 w-4 h-4 bg-orange-400/15 rounded-full blur-sm"
+            className="absolute bottom-32 right-1/4 w-4 h-4 bg-green-400/15 rounded-full blur-sm"
           />
         </div>
       </div>

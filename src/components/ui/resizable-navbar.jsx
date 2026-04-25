@@ -65,7 +65,7 @@ export const NavBody = ({ children, className, visible }) => {
       }}
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent py-2 lg:flex dark:bg-transparent",
-        visible ? "px-4 bg-white/80 dark:bg-neutral-950/80" : "px-6",
+        visible ? "px-4 bg-[#F6F7F4]/80 dark:bg-neutral-950/80" : "px-6",
         className
       )}
     >
@@ -175,7 +175,7 @@ export const MobileNav = ({ children, className, visible }) => {
       }}
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-2rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
-        visible && "bg-white/80 dark:bg-neutral-950/80",
+        visible && "bg-[#F6F7F4]/80 dark:bg-neutral-950/80",
         className
       )}
     >
@@ -228,7 +228,7 @@ export const MobileNavMenu = ({ children, className, isOpen, onClose }) => {
             staggerChildren: 0.1,
           }}
           className={cn(
-            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white/90 backdrop-blur-md px-4 py-8 shadow-[0_0_32px_rgba(34,_42,_53,_0.12),_0_2px_4px_rgba(0,_0,_0,_0.08),_0_0_0_1px_rgba(34,_42,_53,_0.06)] dark:bg-neutral-950/90",
+            "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-[#F6F7F4]/90 backdrop-blur-md px-4 py-8 shadow-[0_0_32px_rgba(34,_42,_53,_0.12),_0_2px_4px_rgba(0,_0,_0,_0.08),_0_0_0_1px_rgba(34,_42,_53,_0.06)] dark:bg-neutral-950/90",
             className
           )}
         >
@@ -282,9 +282,9 @@ export const NavbarLogo = () => {
           alt="Sayan Adhikary"
           width={30}
           height={30}
-          className="rounded-full object-cover border-2 border-orange-500/30"
+          className="rounded-full object-cover border-2 border-green-500/30"
         />
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-500/20 to-red-600/20"></div>
+        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-green-500/20 to-red-600/20"></div>
       </div>
       <span className="font-medium text-black dark:text-white">
         Sahil Sachan
@@ -302,7 +302,7 @@ export const NavbarButton = ({
   ...props
 }) => {
   const baseStyles =
-    "px-3 py-2 rounded-md bg-white button bg-white text-black text-sm font-bold relative cursor-pointer inline-block text-center whitespace-nowrap";
+    "px-3 py-2 rounded-md bg-[#F6F7F4] button bg-[#F6F7F4] text-black text-sm font-bold relative cursor-pointer inline-block text-center whitespace-nowrap";
 
   const variantStyles = {
     primary:
@@ -310,7 +310,7 @@ export const NavbarButton = ({
     secondary: "bg-transparent shadow-none dark:text-white",
     dark: "bg-black text-white shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]",
     gradient:
-      "bg-gradient-to-b from-blue-500 to-blue-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
+      "bg-gradient-to-b from-emerald-500 to-emerald-700 text-white shadow-[0px_2px_0px_0px_rgba(255,255,255,0.3)_inset]",
   };
 
   const MotionTag = motion[Tag] || motion.a;
