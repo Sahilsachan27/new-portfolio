@@ -158,7 +158,7 @@ export function HeroSection() {
           
           <div className="lg:col-span-5 relative mt-12 lg:mt-0">
             <motion.div 
-              className="relative w-full aspect-[4/5] max-w-md mx-auto lg:ml-auto"
+              className="relative w-full aspect-[4/5] max-w-sm mx-auto lg:ml-auto"
               initial={{ opacity: 0, scale: 0.9, x: 50 }}
               animate={{ opacity: 1, scale: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.3 }}
