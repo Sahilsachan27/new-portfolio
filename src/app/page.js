@@ -87,21 +87,23 @@ export default function Home() {
   const skillLogos = [
     {
       node: (
-        <div className="flex items-center gap-2 sm:gap-3 glass-effect px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-emerald-400/30 glow-box group hover:border-emerald-400/50 transition-all duration-300">
-          <IconBrandReact
-            className="text-emerald-400 glow-text group-hover:scale-110 transition-transform duration-300"
-            size={24}
-          />
-          <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
-            React
-          </span>
-        </div>
+        <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-emerald-900/40 to-slate-900/40
+ backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-cyan-400/30 glow-box group hover:border-cyan-400/50 transition-all duration-300">
+  <IconBrandReact
+    className="text-cyan-400 glow-text group-hover:scale-110 transition-transform duration-300"
+    size={24}
+  />
+  <span className="text-white font-medium sm:font-semibold text-sm sm:text-base">
+    React
+  </span>
+</div>
+
       ),
       alt: 'React',
     },
     {
       node: (
-        <div className="flex items-center gap-2 sm:gap-3 glass-effect px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-green-500/30 glow-box group hover:border-green-500/50 transition-all duration-300">
+        <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-green-500/30 glow-box group hover:border-green-500/50 transition-all duration-300">
           <IconBrandMongodb
             className="text-green-500 glow-text group-hover:scale-110 transition-transform duration-300"
             size={24}
@@ -203,7 +205,7 @@ export default function Home() {
     },
     {
       node: (
-        <div className="flex items-center gap-2 sm:gap-3 glass-effect px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-yellow-400/30 glow-box group hover:border-yellow-400/50 transition-all duration-300">
+        <div className="flex items-center gap-2 sm:gap-3 bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm px-3 sm:px-6 py-2 sm:py-3 rounded-full border border-yellow-400/30 glow-box group hover:border-yellow-400/50 transition-all duration-300">
           <IconBrandJavascript
             className="text-yellow-400 glow-text group-hover:scale-110 transition-transform duration-300"
             size={24}

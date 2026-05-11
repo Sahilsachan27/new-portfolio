@@ -198,7 +198,7 @@ export function HeroSection() {
       </div>
       
       {/* Seamless transition element */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#F6F7F4] to-transparent z-20"></div>
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#F6F7F4] to-transparent z-0 pointer-events-none"></div>
     </section>
   );
 }
